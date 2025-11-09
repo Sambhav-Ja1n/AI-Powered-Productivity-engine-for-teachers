@@ -1,0 +1,79 @@
+# ========================================
+# Git Installation & GitHub Push - Manual Steps
+# Copy and paste these commands one by one
+# ========================================
+
+# STEP 1: Download and Install Git
+# Open this link in your browser:
+# https://git-scm.com/download/win
+# 
+# Download "Git for Windows" (64-bit)
+# Run the installer with ALL DEFAULT SETTINGS
+# After installation, CLOSE PowerShell and OPEN A NEW ONE
+
+
+# STEP 2: Verify Git is installed
+# Run this command (after reopening PowerShell):
+git --version
+
+
+# STEP 3: Configure Git (replace with your info)
+git config --global user.name "Sambhav Jain"
+git config --global user.email "your.email@example.com"
+
+
+# STEP 4: Navigate to your project
+cd "d:\Documents\UNI\3rd  Year\Application of Ai\Project"
+
+
+# STEP 5: Initialize Git repository
+git init
+
+
+# STEP 6: Add all files
+git add .
+
+
+# STEP 7: Check what will be committed
+git status
+
+
+# STEP 8: Create initial commit
+git commit -m "Initial commit: AI-Powered Teacher Assistant System"
+
+
+# STEP 9: Add your GitHub repository as remote
+git remote add origin https://github.com/Sambhav-Ja1n/AI-Powered-Productivity-engine-for-teachers.git
+
+
+# STEP 10: Verify remote was added
+git remote -v
+
+
+# STEP 11: Set main branch
+git branch -M main
+
+
+# STEP 12: Push to GitHub
+git push -u origin main
+
+# When prompted:
+# Username: Sambhav-Ja1n
+# Password: Use Personal Access Token (NOT your password)
+#
+# Get token from: https://github.com/settings/tokens
+# Click "Generate new token (classic)"
+# Name: "Teacher Assistant Push"
+# Select scope: "repo" 
+# Copy the token (starts with ghp_...)
+# Paste as password
+
+
+# If push fails (repo has existing files), use:
+git push -u origin main --force
+
+
+# ========================================
+# DONE! Your code is now on GitHub!
+# View at: https://github.com/Sambhav-Ja1n/AI-Powered-Productivity-engine-for-teachers
+# ========================================

@@ -1,0 +1,16 @@
+"""
+Quick fix applied for KeyError: 'badge_count'
+
+ISSUE:
+- Line 747 in app.py was accessing profile['badge_count'] directly
+- This caused KeyError when the key was missing
+
+FIXES APPLIED:
+1. app.py line 744-747: Changed profile['total_points'] to profile.get('total_points', 0)
+2. app.py line 747: Changed profile['badge_count'] to profile.get('badge_count', 0)
+3. scheduling_rewards.py line 327: Added 'badge_count': 0 to error return dict
+
+TESTING:
+Run the app again - the error should be resolved.
+All metrics now have safe fallbacks with default value of 0.
+"""
